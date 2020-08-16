@@ -1,4 +1,7 @@
 # The Plot Classifier
+
+![TPClogo](https://github.com/thebooort/The-Plot-Classifier/blob/master/images/logoTPC.png)
+
 ## Any serious aspect you might find in this repo is purely coincidental
 
 ![](https://img.shields.io/github/issues/thebooort/The-Plot-Classifier)

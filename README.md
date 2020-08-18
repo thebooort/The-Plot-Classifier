@@ -24,7 +24,7 @@ Now with ̶t̶h̶e̶ ̶g̶l̶o̶r̶i̶o̶u̶s̶ ̶h̶u̶m̶a̶n̶k̶i̶n̶d̶ ̶
 
 ## Screenshot
 
-![ss1](https://github.com/thebooort/The-Plot-Classifier/blob/master/images/screenshoot.jpg)
+![ss1](https://github.com/thebooort/The-Plot-Classifier/blob/master/images/screenshot.jpg)
 
 ![ss2](https://github.com/thebooort/The-Plot-Classifier/blob/master/images/screenshot2.jpg)
 

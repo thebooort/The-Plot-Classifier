@@ -1,0 +1,14 @@
+0 Vertical Bar Plot
+1 Horizontal Bar Plot
+2 Scatter Plot
+3 Area Plot
+4 Box Plot
+5 Bubble Plot
+6 Chord Plot
+7 Choropleth Plot
+8 Demographic Pyramid
+9 Doughnut
+10 Line plot
+11 Pie plot
+12 Spider plot
+13 Violin Plot

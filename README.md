@@ -17,6 +17,13 @@ Now with ̶t̶h̶e̶ ̶g̶l̶o̶r̶i̶o̶u̶s̶ ̶h̶u̶m̶a̶n̶k̶i̶n̶d̶ ̶
 
 (Silly summer project to know the name of that cool plot/chart/visualization you saw on a webpage)
 
+## Current Accucracy per class
+
+
+![TPClogo](https://github.com/thebooort/The-Plot-Classifier/blob/master/images/accuracy.png)
+
+
+
 ## Pasos
 
 - Imagenes

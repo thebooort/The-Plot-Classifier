@@ -39,6 +39,7 @@ for i,layer in enumerate(model.layers):
   print(i,layer.name)
   for layer in model.layers:
     layer.trainable=False
+    
 # or if we want to set the first 20 layers of the network to be non-trainable
 for layer in model.layers[:20]:
     layer.trainable=False
@@ -47,32 +48,27 @@ for layer in model.layers[20:]:
    
     
 
-train_datagen=ImageDataGenerator(preprocessing_function=preprocess_input) #included in our dependencies
+train_datagen=ImageDataGenerator(preprocessing_function=preprocess_input,validation_split=0.2) #included in our dependencies and validation split
+
+# declare training set from directory
 
 train_generator=train_datagen.flow_from_directory('train',
                                                  target_size=(224,224),
                                                  color_mode='rgb',
                                                  batch_size=32,
                                                  class_mode='categorical',
-                                                 shuffle=True)  
-'''  
-train_datagen = tf.keras.preprocessing.image_dataset_from_directory(
-    '~/Documentos/Otros_Proyectos/images_for_TPC/images/train',
-    labels="inferred",
-    label_mode="int",
-    class_names=None,
-    color_mode="rgb",
-    batch_size=32,
-    image_size=(256, 256),
-    shuffle=True,
-    seed=None,
-    validation_split=None,
-    subset=None,
-    interpolation="bilinear",
-    follow_links=False,
-)
-'''
+                                                 shuffle=True,subset='training')  
 
+
+# declare training set from directory
+validation_generator = train_datagen.flow_from_directory(
+    'train', # same directory as training data
+    target_size=(224,224),
+    color_mode='rgb',
+    batch_size=32,
+    class_mode='categorical',
+    shuffle=True,
+    subset='validation')
 
 
 model.compile(optimizer='Adam',loss='categorical_crossentropy',metrics=['accuracy'])
@@ -81,7 +77,11 @@ model.compile(optimizer='Adam',loss='categorical_crossentropy',metrics=['accurac
 # evaluation metric will be accuracy
 
 step_size_train = train_generator.n//train_generator.batch_size
+
 history = model.fit_generator(generator=train_generator,
                    steps_per_epoch=step_size_train,
+                   validation_data=validation_generator,
+                   validation_steps = validation_generator.samples // 32,
                    epochs=25)    
 
+# history can be later used to plot acc and loss.

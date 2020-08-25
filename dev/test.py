@@ -3,15 +3,26 @@
 """
 Created on Mon Aug 24 21:37:23 2020
 
+Auxliar script to test any model .
+
+Upload image and predict results
+CAUTIN THIS SCRIPT IS FOR DEV ONLY
+MANY OF THE PARAMETERS ARE NOT DECLARE AND ARE USED FROM MEMORY
+
 @author: thebooort
 """
+import numpy as np
+from PIL import Image, ImageOps
+from keras.models import Model
+
+
 
 def load_image(img_path, show=True):
 
     img = image.load_img(img_path, target_size=(150, 150))
-    img_tensor = image.img_to_array(img)                    # (height, width, channels)
-    img_tensor = np.expand_dims(img_tensor, axis=0)         # (1, height, width, channels), add a dimension because the model expects this shape: (batch_size, height, width, channels)
-    img_tensor /= 255.                                      # imshow expects values in the range [0, 1]
+    img_tensor = image.img_to_array(img)      # (height, width, channels)
+    img_tensor = np.expand_dims(img_tensor, axis=0)   # (1, height, width, channels), add a dimension because the model expects this shape: (batch_size, height, width, channels)
+    img_tensor /= 255.          # imshow expects values in the range [0, 1]
 
     if show:
         plt.imshow(img_tensor[0])                           

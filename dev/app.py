@@ -15,7 +15,7 @@ import time
 
 
 def print_info(label):
-    if label == 0:
+    if label == 12:
         st.write("Your plot is a.....")
         st.markdown('## Vertical Bar Plot!')
         image2 = Image.open('vertical_bar_plot_success.png')
@@ -24,7 +24,7 @@ def print_info(label):
         st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
         st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
  
-    elif label == 1:
+    elif label == 7:
             st.write("Your plot is a.....")
             st.markdown('## Horizontal Bar Plot!')
             image2 = Image.open('horizontal_bar_plot_success.png')
@@ -33,7 +33,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)') 
         
-    elif label == 2:
+    elif label == 10:
             st.write("Your plot is a.....")
             st.markdown('## Scatter Plot!')
             image2 = Image.open('scatter_plot_success.png')
@@ -42,7 +42,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
 
-    elif label == 3:
+    elif label == 0:
             st.write("Your plot is a.....")
             st.markdown('## Area Plot!')
             image2 = Image.open('area_plot_success.png')
@@ -51,7 +51,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
         
-    elif label == 4:
+    elif label == 1:
             st.write("Your plot is a.....")
             st.markdown('## Box Plot!')
             image2 = Image.open('box_plot_success.png')
@@ -60,7 +60,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
         
-    elif label == 5:
+    elif label == 2:
             st.write("Your plot is a.....")
             st.markdown('## Bubble Plot!')
             image2 = Image.open('Bubble_plot_success.png')
@@ -69,7 +69,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
         
-    elif label == 6:
+    elif label == 3:
             st.write("Your plot is a.....")
             st.markdown('## Chord Plot!')
             image2 = Image.open('Chord_plot_success.png')
@@ -78,7 +78,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
         
-    elif label == 7:
+    elif label == 4:
             st.write("Your plot is a.....")
             st.markdown('## Choropleth Plot!')
             image2 = Image.open(' Choropleth_plot_success.png')
@@ -87,7 +87,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
         
-    elif label == 8:
+    elif label == 5:
             st.write("Your plot is a.....")
             st.markdown('## Demographic Pyramid!')
             image2 = Image.open('demographic_pyramid_plot_success.png')
@@ -96,7 +96,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
         
-    elif label == 9:
+    elif label == 6:
             st.write("Your plot is a.....")
             st.markdown('## Doughnut Plot!')
             image2 = Image.open('doughnut_plot_success.png')
@@ -105,7 +105,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
         
-    elif label == 10:
+    elif label == 8:
             st.write("Your plot is a.....")
             st.markdown('## Line Plot!')
             image2 = Image.open('line_plot_success.png')
@@ -114,7 +114,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
         
-    elif label == 11:
+    elif label == 9:
             st.write("Your plot is a.....")
             st.markdown('## Pie Plot!')
             image2 = Image.open('pie_plot_success.png')
@@ -123,7 +123,7 @@ def print_info(label):
             st.markdown('- [matplotlib.pyplot.bar](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html) ')
             st.markdown('- [Plotly](https://plotly.com/python/bar-charts/)')
         
-    elif label == 12:
+    elif label == 11:
             st.write("Your plot is a.....")
             st.markdown('## Spider Plot!')
             image2 = Image.open('spider_plot_success.png')
@@ -165,7 +165,7 @@ if uploaded_file is not None:
     with st.spinner('Wait for it...'):
         time.sleep(5)
         st.success('Done!')
-    label = teachable_machine_classification(image, 'keras_model.h5')
+    label = teachable_machine_classification(image, 'per_trained_v2.h5')
     print_info(label)
 
 
